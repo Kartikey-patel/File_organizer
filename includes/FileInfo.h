@@ -13,6 +13,10 @@ class FileInfo{
 
         std::string getName() const;
 
+        std::string getExtension() const;
+
+        std:: uintmax_t getSize() const;
+
         void display() const;
 
 };

@@ -1,0 +1,11 @@
+# Executable
+app
+
+# Object files
+*.o
+
+# Build directories
+build/
+
+# VS Code settings (optional)
+.vscode/

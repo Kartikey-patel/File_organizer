@@ -5,10 +5,10 @@
 int main(int argc, char* argv[]) {
     std::filesystem::path directoryPath(argv[1]);
 
-    Organizer organizer;
+    Organizer org;
 
-    organizer.scanDirectory(directoryPath);
-    organizer.displayFiles();
+    org.scanDirectory(directoryPath);
+    org.organizer();
 
     return 0;
 }

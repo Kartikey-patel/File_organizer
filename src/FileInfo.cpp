@@ -17,6 +17,9 @@ std:: uintmax_t FileInfo::getSize() const{
     return std::filesystem::file_size(path); 
 }
 
+const std::filesystem::path FileInfo::getPath()const{
+    return path;
+}
 void FileInfo::display() const{
     std::cout << "- - - - - - - - - - - - - - - -\n";
     std::cout << getName() << '\n';

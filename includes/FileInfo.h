@@ -6,7 +6,6 @@
 class FileInfo{
     private:
         std::filesystem:: path path;
-    
     public:
 
         FileInfo(const std::filesystem::path& path);
@@ -16,6 +15,8 @@ class FileInfo{
         std::string getExtension() const;
 
         std:: uintmax_t getSize() const;
+
+        const std::filesystem::path getPath() const;
 
         void display() const;
 

@@ -19,6 +19,7 @@ class Organizer{
             {".java", "Java"},
             {".docx", "doc"},
             {".zip" ,"Archives"}};
+        std::unordered_map<std::string,int>categoryCount;
     public:
         void scanDirectory(const std::filesystem:: path& path);
 
@@ -31,4 +32,6 @@ class Organizer{
         void moveFile(const std::filesystem::path& oldPath,const std::filesystem::path& newPath);
 
         void organizer();
+
+        void summary();
 };  

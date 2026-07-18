@@ -35,16 +35,30 @@ std::filesystem::path Organizer::createCategoryFolder(const std::string& s){
 void Organizer::organizer(){
     for(const auto& file : files){
         std::string category = getCategory(file);
+        categoryCount[category]++;
         std::filesystem::path p = createCategoryFolder(category);
         std::filesystem::path oldPath = file.getPath();
         std::string name = file.getName();
         std::filesystem::path newPath = p / name;
         moveFile(oldPath,newPath);
     }
+    summary();
 }
 
 void Organizer::moveFile(const std::filesystem::path& oldPath,const std::filesystem::path& newPath ){
     std::filesystem::rename(oldPath,newPath);
+}
+
+void Organizer::summary(){
+    std::cout << "============Summary==============\n";
+    std::cout << "Total files scanned :" << files.size() <<'\n';
+    std::cout << "File moved          :" << files.size() <<'\n';
+    std::cout << "Category-wise:\n";
+
+    for(auto& it : categoryCount){
+        std::cout<< it.first << ":" << it.second << '\n';
+    }
+    std::cout << "=================================="; 
 }
 
 void Organizer::displayFiles() const{

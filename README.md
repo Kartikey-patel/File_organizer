@@ -22,7 +22,7 @@ src/
 
 ## Build
 
-g++ -std=c++17 src/*.cpp -Iinclude -o app
+g++ -std=c++17 -Iincludes  src/main.cpp src/FileInfo.cpp src/Organizer.cpp -o app
 
 ## Run
 

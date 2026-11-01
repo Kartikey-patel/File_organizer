@@ -1,11 +1,14 @@
-# Executable
-app
-
-# Object files
+# Executables and build artifacts
+*.exe
+*.obj
 *.o
+*.pdb
+*.ilk
 
 # Build directories
-build/
+/build/
+/cmake-build-*/
 
-# VS Code settings (optional)
+# IDE settings
 .vscode/
+.vs/

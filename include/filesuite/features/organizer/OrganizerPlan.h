@@ -5,6 +5,7 @@
 #include <string>
 #include <system_error>
 #include <vector>
+#include <utility>
 
 namespace filesuite::features::organizer {
 
@@ -28,6 +29,7 @@ struct OrganizerPlan {
     std::size_t readyCount() const;
     std::size_t conflictCount() const;
     std::size_t noOpCount() const;
+
 };
 
 }

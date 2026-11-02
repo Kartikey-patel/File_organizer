@@ -1,4 +1,7 @@
 #include "filesuite/features/organizer/OrganizerPlan.h"
+#include <algorithm>
+#include <cctype>
+#include <unordered_map>
 
 namespace filesuite::features::organizer {
 
@@ -36,6 +39,6 @@ std::size_t OrganizerPlan::noOpCount() const {
     }
 
     return count;
-}
+}   
 
 }

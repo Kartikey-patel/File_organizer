@@ -24,6 +24,7 @@ qt_add_executable(FileSuite
     src/features/organizer/OrganizerRules.cpp
     src/features/organizer/OrganizerPlanBuilder.cpp
     src/features/organizer/OrganizerPlan.cpp
+    src/features/organizer/OrganizerPlanValidator.cpp
 )
 
 target_include_directories(FileSuite
@@ -75,6 +76,17 @@ add_executable(OrganizerPlanBuilderTest
 )
 
 target_include_directories(OrganizerPlanBuilderTest
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+add_executable(OrganizerPlanValidatorTest
+    tests/OrganizerPlanValidatorTest.cpp
+    src/features/organizer/OrganizerPlan.cpp
+    src/features/organizer/OrganizerPlanValidator.cpp
+)
+
+target_include_directories(OrganizerPlanValidatorTest
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
